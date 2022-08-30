@@ -1,13 +1,5 @@
-cc_test(
+sh_test(
     name = "test",
-    srcs = [
-        "bar.cpp",
-        "foo.cpp",
-        "main.cpp",
-    ],
-    deps = [
-        "@boost//:algorithm",
-        "@boost//:any",
-        "@boost//:spirit",
-    ],
+    srcs = ["test.sh"],
+    shard_count = 2,
 )
